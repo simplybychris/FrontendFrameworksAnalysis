@@ -389,4 +389,7 @@ React nie sugeruje, w jaki sposób należy umieścić pliki w folderach. Istniej
 
 oba rozwiązania mają plusy i minusy, lecz nawet dokumentacja wskazuje że nie trzeba się ich sztywno trzymać. React w tym aspekcie jest bardzo elastyczny.
 
-  
+## Wygląd aplikacji
+
+![image](https://user-images.githubusercontent.com/59068947/201477778-6b8a9a73-dcd2-4d1e-aadb-5efe295eb844.png)
+
