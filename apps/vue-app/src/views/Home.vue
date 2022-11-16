@@ -1,18 +1,52 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+<!-- eslint-disable max-len -->
+<div class="container py-5">
+  <div class="p-5 mb-5 bg-dark rounded-3 d-flex flex-column align-items-center">
+    <h1 class="pb-5 text-white">Vue.js 3.0.0</h1>
+    <p>
+      <button class="btn btn-primary mx-2" type="button">Create 1.000 rows</button>
+      <button class="btn btn-primary mx-2" type="button">Update every 5th row</button>
+      <button class="btn btn-primary mx-2" type="button">Append 1.000 rows</button>
+    </p>
+    <p class="pb-5">
+      <button class="btn btn-primary mx-2" type="button">Create 10.000 rows</button>
+      <button class="btn btn-primary mx-2" type="button">Remove every 5th row</button>
+      <button class="btn btn-primary mx-2" type="button">Clear</button>
+    </p>
+    <button class="btn btn-secondary mx-2" type="button" @click="$router.push('second')">Go to 2nd page</button>
   </div>
+  <div class="bg-dark rounded-3">
+    <table class="table text-white">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+      </tr>
+      </thead>
+      <tbody class="table-group-divider">
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Thomas</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td colspan="2">Becky</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td colspan="2">Lucia</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 </template>
-
-<script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-
-@Options({
-  components: {
-    HelloWorld,
-  },
-})
-export default class Home extends Vue {}
-</script>
