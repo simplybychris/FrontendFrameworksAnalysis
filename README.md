@@ -393,3 +393,4 @@ oba rozwiązania mają plusy i minusy, lecz nawet dokumentacja wskazuje że nie 
 
 ![image](https://user-images.githubusercontent.com/59068947/201477778-6b8a9a73-dcd2-4d1e-aadb-5efe295eb844.png)
 
+![preview](https://user-images.githubusercontent.com/59068947/203162492-4b1ee7f9-c4c1-49e6-950b-6823872861ab.gif)
