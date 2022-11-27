@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
 interface DataType {
@@ -17,7 +17,7 @@ function Home() {
     return Math.round(Math.random() * 1000) % max;
   }
 
-  function generateData(count: number = 1000): DataType[] {
+  const generateData = useCallback((count: number = 1000): DataType[] => {
     let adjectives = [ 'elegant', 'coherent', 'comprehensive', 'like', 'ragged', 'organic', 'ambiguous', 'wiry', 'clever', 'violet'];
     let items = [ 'toothpick', 'phone', 'computer', 'hat', 'socks', 'car', 'shirt', 'rock', 'pad', 'paper'];
     const data: DataType[] = [];
@@ -33,7 +33,7 @@ function Home() {
       id++;
     }
     return data;
-  }
+  }, []);
 
   function append() {
     let dataToUpdate = [...data];
@@ -73,28 +73,10 @@ function Home() {
   }
 
   useEffect(() => {
-    function generateData2(count: number = 1000): DataType[] {
-      let adjectives = [ 'elegant', 'coherent', 'comprehensive', 'like', 'ragged', 'organic', 'ambiguous', 'wiry', 'clever', 'violet'];
-      let items = [ 'toothpick', 'phone', 'computer', 'hat', 'socks', 'car', 'shirt', 'rock', 'pad', 'paper'];
-      const data: DataType[] = [];
-
-      for (let i = 0; i < count; i++) {
-        data.push({
-          id,
-          name:
-            adjectives[random(adjectives.length)] +
-            ' ' +
-            items[random(items.length)],
-        });
-        id++;
-      }
-      return data;
-    }
-
     return () => {
-      setData(generateData2(100))
-    }
-  }, [])
+      setData(generateData(100));
+    };
+  }, [generateData]);
 
   return (
     <div className="container py-5">
@@ -141,8 +123,8 @@ function Home() {
             </tr>
           </thead>
           <tbody className="table-group-divider">
-            {data.map(({ id, name }, index) => (
-              <tr key={index}>
+            {data.map(({ id, name }) => (
+              <tr key={id}>
                 <th scope="row">{id}</th>
                 <td>{name}</td>
               </tr>
