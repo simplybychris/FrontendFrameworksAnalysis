@@ -2,14 +2,14 @@
   <div class="p-5 mb-5 bg-dark rounded-3 d-flex flex-column align-items-center">
     <h1 class="pb-5 text-white">{{title}}</h1>
     <p>
-      <button class="btn btn-primary mx-2" type="button" (click)="createThousandRows()">Create 1.000 rows</button>
-      <button class="btn btn-primary mx-2" type="button" (click)="update()">Update every 5th row</button>
-      <button class="btn btn-primary mx-2" type="button" (click)="append()">Append 1.000 rows</button>
+      <button class="btn btn-primary mx-2 createThousandRows" type="button" (click)="createThousandRows()">Create 1.000 rows</button>
+      <button class="btn btn-primary mx-2 update" type="button" (click)="update()">Update every 5th row</button>
+      <button class="btn btn-primary mx-2 append" type="button" (click)="append()">Append 1.000 rows</button>
     </p>
     <p class="pb-5">
-      <button class="btn btn-primary mx-2" type="button" (click)="createTenThousandRows()">Create 10.000 rows</button>
-      <button class="btn btn-primary mx-2" type="button" (click)="remove()">Remove every 5th row</button>
-      <button class="btn btn-primary mx-2" type="button" (click)="clear()">Clear</button>
+      <button class="btn btn-primary mx-2 createTenThousandRows" type="button" (click)="createTenThousandRows()">Create 10.000 rows</button>
+      <button class="btn btn-primary mx-2 remove" type="button" (click)="remove()">Remove every 5th row</button>
+      <button class="btn btn-primary mx-2 clear" type="button" (click)="clear()">Clear</button>
     </p>
     <button class="btn btn-secondary mx-2" type="button" routerLink="/second">Go to 2nd page</button>
   </div>
