@@ -4,14 +4,14 @@
     <div class="p-5 mb-5 bg-dark rounded-3 d-flex flex-column align-items-center">
       <h1 class="pb-5 text-white">Vue.js 3.0.0</h1>
       <p>
-        <button class="btn btn-primary mx-2" type="button" @click.prevent="data = generateData(1000)">Create 1.000 rows</button>
-        <button class="btn btn-primary mx-2" type="button" @click.prevent="update()">Update every 5th row</button>
-        <button class="btn btn-primary mx-2" type="button" @click.prevent="append()">Append 1.000 rows</button>
+        <button class="btn btn-primary mx-2 createThousandRows" type="button" @click.prevent="data = generateData(1000)">Create 1.000 rows</button>
+        <button class="btn btn-primary mx-2 update" type="button" @click.prevent="update()">Update every 5th row</button>
+        <button class="btn btn-primary mx-2 append" type="button" @click.prevent="append()">Append 1.000 rows</button>
       </p>
       <p class="pb-5">
-        <button class="btn btn-primary mx-2" type="button" @click.prevent="data = generateData(10000)">Create 10.000 rows</button>
-        <button class="btn btn-primary mx-2" type="button" @click.prevent="remove()">Remove every 5th row</button>
-        <button class="btn btn-primary mx-2" type="button" @click.prevent="clear()">Clear</button>
+        <button class="btn btn-primary mx-2 createTenThousandRows" type="button" @click.prevent="data = generateData(10000)">Create 10.000 rows</button>
+        <button class="btn btn-primary mx-2 remove" type="button" @click.prevent="remove()">Remove every 5th row</button>
+        <button class="btn btn-primary mx-2 clear" type="button" @click.prevent="clear()">Clear</button>
       </p>
       <button class="btn btn-secondary mx-2" type="button" @click="$router.push('second')">Go to 2nd page</button>
     </div>
