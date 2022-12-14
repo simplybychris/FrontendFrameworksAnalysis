@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-
+import {BrowserRouter as Router} from 'react-router-dom';
 interface DataType {
   id: number;
   name: string;
@@ -79,31 +79,32 @@ function Home() {
   }, [generateData]);
 
   return (
+  <Router>
     <div className="container py-5">
       <div className="p-5 mb-5 bg-dark rounded-3 d-flex flex-column align-items-center">
         <h1 className="pb-5 text-white">{title}</h1>
         <p>
-          <button className="btn btn-primary mx-2" onClick={createThousandRows}>
+          <button className="btn btn-primary mx-2 createThousandRows" onClick={createThousandRows}>
             Create 1.000 rows
           </button>
-          <button className="btn btn-primary mx-2" onClick={update}>
+          <button className="btn btn-primary mx-2 update" onClick={update}>
             Update every 5th row
           </button>
-          <button className="btn btn-primary mx-2" onClick={append}>
+          <button className="btn btn-primary mx-2 append" onClick={append}>
             Append 1.000 rows
           </button>
         </p>
         <p className="pb-5">
           <button
-            className="btn btn-primary mx-2"
+            className="btn btn-primary mx-2 createTenThousandRows"
             onClick={createTenThousandRows}
           >
             Create 10.000 rows
           </button>
-          <button className="btn btn-primary mx-2" onClick={remove}>
+          <button className="btn btn-primary mx-2 remove" onClick={remove}>
             Remove every 5th row
           </button>
-          <button className="btn btn-primary mx-2" onClick={clear}>
+          <button className="btn btn-primary mx-2 clear" onClick={clear}>
             Clear
           </button>
         </p>
@@ -133,6 +134,7 @@ function Home() {
         </table>
       </div>
     </div>
+    </Router>
   );
 }
 
