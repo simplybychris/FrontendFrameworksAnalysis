@@ -19,7 +19,7 @@ import './commands'
 // require('./commands')
 import "@cypress-audit/lighthouse/commands";
 import { mount } from 'cypress/angular';
-import 'cypress-time-marks';
+import 'cypress-time-marksjas';
 
 // Augment the Cypress namespace to include type definitions for
 // your custom command.

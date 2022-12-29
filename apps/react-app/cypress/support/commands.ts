@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import 'cypress-time-marks'
+import 'cypress-time-marksjas'
 // ***********************************************
 // This example commands.ts shows you how to
 // create various custom commands and overwrite

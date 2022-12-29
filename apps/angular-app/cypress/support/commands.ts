@@ -36,4 +36,4 @@
 //   }
 // }
 import "@cypress-audit/lighthouse/commands";
-import 'cypress-time-marks';
+import 'cypress-time-marksjas';

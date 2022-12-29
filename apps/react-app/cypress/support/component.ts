@@ -15,7 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-import 'cypress-time-marks'
+import 'cypress-time-marksjas'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

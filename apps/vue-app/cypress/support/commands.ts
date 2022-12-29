@@ -1,4 +1,4 @@
-import 'cypress-time-marks'
+import 'cypress-time-marksjas'
 
 /// <reference types="cypress" />
 // ***********************************************
